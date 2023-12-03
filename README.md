@@ -1,1 +1,1 @@
-# ansible-role-npm
+# Ansible Role: Nginx Proxy Manager

@@ -1,0 +1,28 @@
+version: "3"
+services:
+  npm:
+    image: ${DOCKER_IMAGE}
+    container_name: npm
+    user: root
+    ports:
+      - "{{ npm_http_port }}:80"
+      - "{{ npm_https_port }}:443"
+      - "{{ npm_admin_port }}:81"
+    volumes:
+      - {{ npm_data }}:/data
+      - {{ npm_data_cert }}:/etc/letsencrypt
+    restart: unless-stopped
+{% if use_extra_hosts %}
+    extra_hosts:
+    {% for host in extra_hosts %}
+    - {{ host }}
+    {% endfor %}
+{% endif %}
+{% if use_dkr_net %}
+    networks:
+      - {{ dkr_network }}
+
+networks:
+  {{ dkr_network }}:
+    external: true
+{% endif %}

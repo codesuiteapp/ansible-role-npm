@@ -1,0 +1,26 @@
+---
+image_registry_server: "docker.io"
+npm_image: "jc21/nginx-proxy-manager"
+npm_ver: "latest"
+
+docker_compose_bin: "docker-compose"
+use_dkr_net: false
+use_traefik: false
+use_traefik_tls: false
+dkr_network: devops_net
+use_extra_hosts: false
+add_etc_host: "10.11.22.10   devops.com"
+
+app_home_dir: /app
+app_data_dir: /data
+app_logs_dir: /log
+
+npm_http_port: 8080
+npm_https_port: 8443
+npm_admin_port: 8181
+npm_log_dir: "/var/log/nginx"
+
+create_user: false
+adm_user: "appadm"
+adm_group: "appadm"
+adm_uid: "1000"

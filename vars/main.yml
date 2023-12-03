@@ -1,0 +1,4 @@
+---
+npm_home: "{{ app_home_dir }}/npm-docker"
+npm_data: "{{ app_data_dir }}/data"
+npm_logs: "{{ app_logs_dir }}/npm"

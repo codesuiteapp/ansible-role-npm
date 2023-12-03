@@ -10,7 +10,7 @@ services:
       - "{{ npm_admin_port }}:81"
     volumes:
       - {{ npm_data }}:/data
-      - {{ npm_data_cert }}:/etc/letsencrypt
+      - {{ npm_data }}/cert:/etc/letsencrypt
     restart: unless-stopped
 {% if use_extra_hosts %}
     extra_hosts:

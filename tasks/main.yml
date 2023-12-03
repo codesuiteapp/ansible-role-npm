@@ -22,7 +22,7 @@
   with_items:
     - "{{ npm_home }}"
     - "{{ npm_data }}"
-    - "{{ npm_data_cert }}"
+    - "{{ npm_data }}/cert"
     - "{{ npm_logs }}"
 
 - name: Copy file

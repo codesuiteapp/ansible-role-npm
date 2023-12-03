@@ -5,7 +5,7 @@ dependencies:
 
 galaxy_info:
   author: codesuiteapp
-  description: Nginx Server
+  description: Nginx Proxy Manager
   company: CodeSuiteApp
   license: license (GPL-2.0-or-later)
   min_ansible_version: 2.1

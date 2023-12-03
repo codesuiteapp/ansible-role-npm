@@ -4,6 +4,8 @@ services:
     image: ${DOCKER_IMAGE}
     container_name: npm
     user: root
+    environment:
+      TZ: "Asia/Seoul"
     ports:
       - "{{ npm_http_port }}:80"
       - "{{ npm_https_port }}:443"
